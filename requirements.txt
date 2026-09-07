@@ -1,0 +1,12 @@
+# Base dependencies — enough to run every Tier 1 module.
+# Some later modules need extra packages; those are listed in the module's own README.
+
+langchain>=0.3
+langchain-openai>=0.2
+langchain-community>=0.3
+langchain-chroma>=0.2
+langchain-text-splitters>=0.3
+chromadb>=0.5
+python-dotenv>=1.0
+tiktoken>=0.8
+numpy>=1.26

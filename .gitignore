@@ -1,0 +1,17 @@
+# Secrets
+.env
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+.ipynb_checkpoints/
+
+# Local vector stores and other generated artifacts
+.chroma/
+chroma_db/
+*.faiss
+*.sqlite3
+.cache/
