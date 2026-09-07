@@ -1,0 +1,103 @@
+{
+  "description": "Hand-written evaluation set for the Helix Robotics corpus. Used by module 09. 'sources' lists the documents that must be retrieved for the question to be answerable; 'answer' is the ground truth used to grade generation.",
+  "examples": [
+    {
+      "id": "atlas-payload",
+      "question": "What is the maximum payload of the Atlas R5?",
+      "sources": ["product-atlas-r5.md"],
+      "answer": "450 kg.",
+      "type": "single-fact"
+    },
+    {
+      "id": "atlas-charge-time",
+      "question": "How long does an Atlas R5 take to charge?",
+      "sources": ["product-atlas-r5.md"],
+      "answer": "42 minutes to 80% and 71 minutes to full.",
+      "type": "single-fact"
+    },
+    {
+      "id": "error-e311",
+      "question": "What does error E-311 mean?",
+      "sources": ["support-faq.md"],
+      "answer": "Charge fault: the robot docked but did not draw current. Check dock contacts for debris and confirm the dock type matches the robot (D2 for Atlas, D1 for Scout).",
+      "type": "exact-identifier"
+    },
+    {
+      "id": "error-e204-cause",
+      "question": "Why do most E-204 errors happen?",
+      "sources": ["support-faq.md"],
+      "answer": "Localisation is lost, and roughly 70% of cases are caused by racking being moved without updating the map.",
+      "type": "exact-identifier"
+    },
+    {
+      "id": "dock-compatibility",
+      "question": "Can an Atlas robot use a Beacon D1 dock?",
+      "sources": ["product-scout-m2.md", "support-faq.md"],
+      "answer": "No. Atlas robots use the Beacon D2 dock; the D1 is for Scout robots. Cross-docking produces error E-311.",
+      "type": "multi-document"
+    },
+    {
+      "id": "warranty-start",
+      "question": "When does the warranty period start?",
+      "sources": ["warranty-policy.md"],
+      "answer": "At commissioning sign-off, not at shipment. If commissioning is delayed more than 90 days for customer reasons, it starts on day 91 after delivery.",
+      "type": "single-fact"
+    },
+    {
+      "id": "battery-warranty",
+      "question": "How long is the battery warranty with HelixCare+?",
+      "sources": ["warranty-policy.md"],
+      "answer": "24 months or 2,400 cycles, whichever comes first.",
+      "type": "single-fact"
+    },
+    {
+      "id": "cold-store",
+      "question": "Can I run an Atlas R5 in a freezer at -20C?",
+      "sources": ["product-atlas-r5.md"],
+      "answer": "No. The standard Atlas R5 is rated to -5 C. The Atlas R5-C variant is rated to -25 C and should be specified instead. Operating outside the rated envelope voids warranty.",
+      "type": "inference"
+    },
+    {
+      "id": "floor-flatness",
+      "question": "What are the floor requirements for a deployment?",
+      "sources": ["deployment-guide.md"],
+      "answer": "Floor flatness must meet DIN 15185 for AMR traffic lanes, maximum step height 15 mm, maximum gradient 4% laden or 6% unladen, and floors must be sealed concrete, epoxy, or equivalent.",
+      "type": "single-fact"
+    },
+    {
+      "id": "network-requirements",
+      "question": "What WiFi does HelixOS need?",
+      "sources": ["support-faq.md", "deployment-guide.md"],
+      "answer": "A dedicated 5 GHz WLAN with fast roaming (802.11r), signal no weaker than -65 dBm across the operating area, and under 50 ms latency to the HelixOS server. 2.4 GHz is not supported.",
+      "type": "multi-document"
+    },
+    {
+      "id": "payload-comparison",
+      "question": "How much more can an Atlas R5 carry than a Scout M2?",
+      "sources": ["product-atlas-r5.md", "product-scout-m2.md"],
+      "answer": "The Atlas R5 carries 450 kg versus the Scout M2's 12 kg, so 438 kg more. The Scout's rating covers auxiliary sensors only and it must not be used to move goods.",
+      "type": "multi-document"
+    },
+    {
+      "id": "fleet-limit",
+      "question": "How many robots can one HelixOS instance manage?",
+      "sources": ["support-faq.md"],
+      "answer": "Up to 120 robots. Beyond that a second instance with a federation gateway is deployed.",
+      "type": "single-fact"
+    },
+    {
+      "id": "unanswerable-cfo",
+      "question": "Who is the CFO of Helix Robotics?",
+      "sources": [],
+      "answer": "NOT_IN_CORPUS",
+      "type": "unanswerable"
+    },
+    {
+      "id": "unanswerable-pricing-discount",
+      "question": "What discount does Helix offer to government customers?",
+      "sources": [],
+      "answer": "NOT_IN_CORPUS",
+      "type": "unanswerable"
+    }
+  ]
+}

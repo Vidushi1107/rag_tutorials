@@ -63,10 +63,10 @@ equally obvious when it silently is not.
 
 | # | Module | Concept |
 | --- | --- | --- |
-| 06 | Query Transformation | Rewriting the question to retrieve better |
-| 07 | Hybrid Search | Combining keyword (BM25) and vector retrieval |
-| 08 | Reranking | A second, slower pass that fixes ranking errors |
-| 09 | Evaluating RAG | Measuring faithfulness, relevancy, and recall |
+| 06 | [Query Transformation](modules/06-query-transformation/) | Rewriting the question to retrieve better |
+| 07 | [Hybrid Search](modules/07-hybrid-search/) | Combining keyword (BM25) and vector retrieval |
+| 08 | [Reranking](modules/08-reranking/) | A second, slower pass that fixes ranking errors |
+| 09 | [Evaluating RAG](modules/09-evaluating-rag/) | Measuring faithfulness, relevancy, and recall |
 
 ### Tier 3 — Advanced & Production
 
