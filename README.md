@@ -72,11 +72,29 @@ equally obvious when it silently is not.
 
 | # | Module | Concept |
 | --- | --- | --- |
-| 10 | Advanced Retrievers | Parent-document, sentence-window, self-querying |
-| 11 | Conversational RAG | Multi-turn history and query condensation |
-| 12 | Agentic RAG | Letting the model decide when and what to retrieve |
-| 13 | Multi-modal RAG | Tables, images, and real-world PDF layouts |
-| 14 | Production Readiness | Caching, cost, latency, guardrails, observability |
+| 10 | [Advanced Retrievers](modules/10-advanced-retrievers/) | Parent-document, sentence-window, self-querying |
+| 11 | [Conversational RAG](modules/11-conversational-rag/) | Multi-turn history and query condensation |
+| 12 | [Agentic RAG](modules/12-agentic-rag/) | Letting the model decide when and what to retrieve |
+| 13 | [Multi-modal RAG](modules/13-multimodal-rag/) | Tables, images, and real-world PDF layouts |
+| 14 | [Production Readiness](modules/14-production-readiness/) | Caching, cost, latency, guardrails, observability |
 
 Modules are self-contained: each one builds the pipeline it needs, so you can jump straight to
 module 08 without having run 01-07. Working in order is still the intended path.
+
+## Optional extras
+
+`requirements.txt` covers most of the course. A few modules use an extra package, and each one
+degrades gracefully — the relevant section prints a skip notice instead of crashing.
+
+| Package | Needed by | For |
+| --- | --- | --- |
+| `langchain-experimental` | 02 | Semantic chunking |
+| `rank_bm25` | 07, 08, 09 | BM25 keyword retrieval |
+| `sentence-transformers` | 08 | Local cross-encoder reranking (large — pulls in torch) |
+| `lark` | 10 | Self-query retriever |
+| `matplotlib` | 13 | Generating the sample chart for the vision section |
+| `pypdf` | 13 | PDF extraction, if you supply a PDF |
+
+```bash
+pip install rank_bm25 lark langchain-experimental    # the light ones, worth having
+```
