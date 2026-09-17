@@ -50,7 +50,7 @@ intact when it can. **This is the right default** for most prose.
 **3. Token-based** — split on tokenizer tokens rather than characters. Characters are a proxy
 for what you actually care about (context window and cost), and the proxy is bad: code and
 tables run ~2 characters per token while English prose runs ~4. If you are tight against a
-context limit, count the thing you are actually limited by.
+context limit, count the thing you are actually limited by. [Make each chunk contain a specified number of tokens, rather than a specified number of characters.]
 
 **4. Structure-aware** (`MarkdownHeaderTextSplitter`, and equivalents for HTML/code) — split on
 the document's own structure, and promote headers into metadata. A chunk from the Atlas spec
